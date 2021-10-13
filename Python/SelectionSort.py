@@ -13,3 +13,12 @@ def selection_sort(arr):
         arr[minimum],arr[i]=arr[i],arr[minimum]
     
     return arr
+
+
+arr= [1,4,5,6,54,6,8,6,5]
+
+print(arr)
+
+print(selection_sort(arr))
+
+print(arr)

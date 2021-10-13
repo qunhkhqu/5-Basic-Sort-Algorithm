@@ -1,16 +1,16 @@
 def merge_sort(arr):
     # The last array split
-    if len(arr)<=1:
+    if len(arr) <=1 :
         return arr
     
     mid=len(arr)
 
     # Perform merge sort recursively on both halves
-    left, right = merge_sort(arr[:mid]),merge_sort(arr[mid:])
+    #left, right = merge_sort(arr[:mid]), merge_sort(arr[mid:])
 
     # Merge each side together
 
-    return merge(left,right, arr.copy())
+    #return merge(left,right, arr.copy())
 
 
 def merge(left,right,merged):
@@ -34,3 +34,13 @@ def merge(left,right,merged):
         merged[left_cursor+right_cursor]=right[right_cursor]
 
     return merged
+
+
+arr= [1,4,5,6,54,6,8,6,5]
+
+print(arr)
+
+print(merge_sort(arr))
+
+print(arr)
+

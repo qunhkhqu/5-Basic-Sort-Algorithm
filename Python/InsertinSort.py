@@ -11,3 +11,12 @@ def insertion_sort(arr):
 
         arr[pos]=cursor
     return arr
+
+
+arr= [1,4,5,6,54,6,8,6,5]
+
+print(arr)
+
+print(insertion_sort(arr))
+
+print(arr)
