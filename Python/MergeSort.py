@@ -3,14 +3,14 @@ def merge_sort(arr):
     if len(arr) <=1 :
         return arr
     
-    mid=len(arr)
+    mid=len(arr)//2
 
     # Perform merge sort recursively on both halves
-    #left, right = merge_sort(arr[:mid]), merge_sort(arr[mid:])
-
+    left, right = merge_sort(arr[:mid]), merge_sort(arr[mid:])
+   
     # Merge each side together
 
-    #return merge(left,right, arr.copy())
+    return merge(left, right, arr.copy())
 
 
 def merge(left,right,merged):
@@ -28,7 +28,7 @@ def merge(left,right,merged):
             right_cursor+=1
     
     for left_cursor in range(left_cursor, len(left)):
-        merged[left+right_cursor]=left[left_cursor]
+        merged[left_cursor+right_cursor]=left[left_cursor]
 
     for right_cursor in range(right_cursor,len(right)):
         merged[left_cursor+right_cursor]=right[right_cursor]
@@ -36,11 +36,9 @@ def merge(left,right,merged):
     return merged
 
 
-arr= [1,4,5,6,54,6,8,6,5]
-
+arr= [1,4,5,6,54,6,8,6,5,45,4084,58493,57345,5908]
 print(arr)
 
 print(merge_sort(arr))
 
-print(arr)
 

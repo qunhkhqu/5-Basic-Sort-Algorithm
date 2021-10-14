@@ -7,16 +7,13 @@ def insertion_sort(arr):
             #Swap the number down the list
             arr[pos]=arr[pos-1]
             pos=pos-1
+        
         #Break and do the final swap
-
         arr[pos]=cursor
-    return arr
 
 
-arr= [1,4,5,6,54,6,8,6,5]
-
+arr= [1,4,5,6,54,6,8,6,5,4857,5,60,73875]
 print(arr)
 
-print(insertion_sort(arr))
-
+insertion_sort(arr)
 print(arr)

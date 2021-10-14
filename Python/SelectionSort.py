@@ -1,3 +1,6 @@
+def swap(arr,i,j):
+        arr[i],arr[j]=arr[j],arr[i]
+
 def selection_sort(arr):
 
     for i in range(len(arr)):
@@ -10,15 +13,11 @@ def selection_sort(arr):
                 
         #Place it the front of the
         #Sorted end of the array
-        arr[minimum],arr[i]=arr[i],arr[minimum]
-    
-    return arr
+        swap(arr,minimum,i)
 
 
-arr= [1,4,5,6,54,6,8,6,5]
-
+arr= [1,4,5,6,54,6,8,6,5,58934,24,2823]
 print(arr)
 
-print(selection_sort(arr))
-
+selection_sort(arr)
 print(arr)

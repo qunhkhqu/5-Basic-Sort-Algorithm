@@ -12,7 +12,7 @@ def partition(array, begin, end):
 def quick_sort_recursion(array, begin, end):
     if begin>=end:
         return
-    
+     
     pivot_idx=partition(array,begin,end)
 
     quick_sort_recursion(array,begin,pivot_idx-1)
@@ -22,13 +22,11 @@ def quick_sort(array, begin=0, end=None):
     if end is None:
         end = len(array) -1
         
-    return quick_sort_recursion(array, begin, end)
+    quick_sort_recursion(array, begin, end)
 
 
 arr= [1,4,5,6,54,6,8,6,5]
-
 print(arr)
 
-print(quick_sort(arr))
-
+quick_sort(arr)
 print(arr)
